@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Question Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    #question {
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #2c3e50;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Question Generator</h1>
+  <div id="question"> Click the button to get a question!</div>
+  <button onclick="generateQuestion()">Get Question</button>
+
+  <script>
+    const questions = [
+      "What is your favorite book and why?",
+      "If you could travel anywhere in the world, where would you go?",
+      "What is one skill you wish you had?",
+      "Who has been the most influential person in your life?",
+      "What do you consider your greatest achievement?",
+      "If you could have any superpower, what would it be?",
+      "What is something you’ve always wanted to learn?",
+      "Describe a perfect day for you.",
+      "What was your favorite subject in school?",
+      "If you could meet any historical figure, who would it be and why?"
+    ];
+
+    function generateQuestion() {
+      const randomIndex = Math.floor(Math.random() * questions.length);
+      document.getElementById("question").textContent = questions[randomIndex];
+    }
+  </script>
+  <br> 
+  <br> <font size="3">This is a Special Edition for CA2ers:) </font> 
+</body>
+</html>
